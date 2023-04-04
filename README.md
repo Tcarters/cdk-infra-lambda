@@ -26,14 +26,13 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
     cdk --version
  
     sudo npm install -g typescript
-
 ```
 
 ## Checking my Account  before Launch
 
-    ![image](https://user-images.githubusercontent.com/71230412/229918731-95431bd0-2129-4ef9-9423-4c2dc3bca771.png)
+![image](https://user-images.githubusercontent.com/71230412/229918731-95431bd0-2129-4ef9-9423-4c2dc3bca771.png)
     
-    ![image](https://user-images.githubusercontent.com/71230412/229919639-ef164442-15a4-4502-96cb-9721e4ee219e.png)
+ ![image](https://user-images.githubusercontent.com/71230412/229919639-ef164442-15a4-4502-96cb-9721e4ee219e.png)
 
 
 - - -
