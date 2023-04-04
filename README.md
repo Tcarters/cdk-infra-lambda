@@ -29,23 +29,14 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
 ```
 
+## Checking my Account  before Launch
 
-## Bootstrap our AWS Account:
-- We need initialize our environment with our AWS Account
-```bash
-    # Configure our AWS Account locally using aws credentials
-    aws configure
+    ![image](https://user-images.githubusercontent.com/71230412/229918731-95431bd0-2129-4ef9-9423-4c2dc3bca771.png)
+    
+    ![image](https://user-images.githubusercontent.com/71230412/229919639-ef164442-15a4-4502-96cb-9721e4ee219e.png)
 
-    # Get Our AWS Account
-    aws sts get-caller-identity
 
-    #Display the default region
-    aws configure get region
-
-    ## Bootstrap our AWS Account
-    cdk bootstrap aws://ACCOUNT-NUMBER/REGION
-
-```
+- - -
 
 ## Build the stack & Check the Difference
 
@@ -85,5 +76,22 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
         Other Changes
         [+] Unknown Rules: {"CheckBootstrapVersion":{"Assertions":[{"Assert":{"Fn::Not":[{"Fn::Contains":[["1","2","3","4","5"],{"Ref":"BootstrapVersion"}]}]},"AssertDescription":"CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."}]}}
+```
+
+## Bootstrap our AWS Account:
+- We need initialize our environment with our AWS Account
+```bash
+    # Configure our AWS Account locally using aws credentials
+    aws configure
+
+    # Get Our AWS Account
+    aws sts get-caller-identity
+
+    #Display the default region
+    aws configure get region
+
+    ## Bootstrap our AWS Account
+    cdk bootstrap aws://ACCOUNT-NUMBER/REGION
+
 ```
 
