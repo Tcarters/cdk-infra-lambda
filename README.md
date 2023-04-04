@@ -158,3 +158,6 @@ And we can see our Function works as expected...
 ```bash
     cdk destroy
 ```
+
+![image](https://user-images.githubusercontent.com/71230412/229930968-20cf91d4-0dff-461e-a263-412151f5dc3d.png)
+
