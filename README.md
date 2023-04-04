@@ -111,3 +111,8 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 And we can see our Function works as expected...
 
 
+## Deploy our Stack to AWS
+
+```bash
+    cdk deploy
+```
