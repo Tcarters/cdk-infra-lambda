@@ -1,6 +1,6 @@
 # Welcome to Small CDK TypeScript project to ccreate a Lambda function.
 
-This is a blank project for CDK development with TypeScript.
+Using Aws CDK CLI to create a Lambda function with TypeScript.
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
@@ -93,4 +93,21 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
     cdk bootstrap aws://ACCOUNT-NUMBER/REGION
 
 ```
+
+## Result & Test the deployment
+
+- In our CloudFormation page, we can see really that a new stack were created by AWS CDk CLI
+![image](https://user-images.githubusercontent.com/71230412/229923131-978878a0-dd40-4486-b5c0-e8460fbcc577.png)
+
+- A new Lambda function named `MyfirstLbdafunction ` was created also.
+![image](https://user-images.githubusercontent.com/71230412/229923433-aa717870-1e35-4c78-93e1-781e84330cdc.png)
+
+- Now test our created function on AWS :
+
+![image](https://user-images.githubusercontent.com/71230412/229924561-5bda9191-836d-4c3b-b0cf-c0e384d7eb8a.png)
+
+![image](https://user-images.githubusercontent.com/71230412/229924919-4da6dd14-dd7b-4a18-bcda-c38841712f07.png)
+
+And we can see our Function works as expected...
+
 
