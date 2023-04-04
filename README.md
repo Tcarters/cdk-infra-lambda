@@ -158,6 +158,9 @@ And we can see our Function works as expected...
 ```bash
     cdk destroy
 ```
-
 ![image](https://user-images.githubusercontent.com/71230412/229930968-20cf91d4-0dff-461e-a263-412151f5dc3d.png)
+
+- In Our AWS Account, we can see the Lambda function was deleted after run `cdk destroy`...
+
+![image](https://user-images.githubusercontent.com/71230412/229932436-f254d688-f8dc-4b45-ad90-1e00577cce45.png)
 
