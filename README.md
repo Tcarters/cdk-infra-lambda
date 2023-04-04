@@ -1,8 +1,6 @@
-# Welcome to Small CDK TypeScript project to ccreate a Lambda function.
+# Use AWS CDK Tool to create a Lambda function in AWS Account.
 
-Using Aws CDK CLI to create a Lambda function with TypeScript.
-
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+In this repo, we write the Aws CDK code to create a Lambda function with as base language TypeScript and we deploy it to AWS...
 
 ## Useful commands
 
@@ -12,7 +10,7 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 * `cdk deploy`      deploy this stack to your default AWS account/region
 * `cdk diff`        compare deployed stack with current state
 * `cdk synth`       emits the synthesized CloudFormation template
-
+* The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
 ## Requirements
 
