@@ -70,7 +70,7 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
 
 ## Bootstrap our AWS Account:
-- We need initialize our environment with our AWS Account before building our application.
+- We need to initialize our environment with our AWS Account before building our application.
 ```bash
     # Configure our AWS Account locally using aws credentials
     aws configure
@@ -97,7 +97,7 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
     ## Check the difference to see what will be deployed or Not ..
     cdk diff
 
-    ## Output:
+    ## Output got with the `cdk diff` command :
     []:~/cdk-infra-lambda$ cdk diff
         Stack CdkInfraLambdaStack
         IAM Statement Changes
