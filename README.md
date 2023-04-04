@@ -37,6 +37,57 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
 - - -
 
+## Setting up
+- Create our working directory
+```bash
+    mkdir cdk-infra-lambda && cdk-infra-lambda
+
+    ## Initialize our App
+    cdk init --language typescript
+
+```
+## Code our function
+- We have to write our code in the file `lib/cdk-infra-lambda-stack.ts` :
+
+```Javascript
+    // We are just creating a function name `MyfirstLbdaFunction` which take a name & value pair and return a string
+     new lambda.Function(this, 'LambdaFunction', {
+      functionName: 'MyfirstLbdaFunction',
+      runtime: lambda.Runtime.NODEJS_18_X,
+      handler: 'index.handler',
+      code: new lambda.AssetCode('src'),
+      timeout: cdk.Duration.seconds(30),
+      memorySize: 128,
+```
+- The instructing code is defined in the folder `src/index.ts`
+
+```javascript
+    export const handler = async (event: { name: string } ) => {
+        const result : string = event.name ? `Nice Job ${event.name}!` : 'Failure downgraded!';
+        return result;
+};
+```
+
+
+## Bootstrap our AWS Account:
+- We need initialize our environment with our AWS Account before building our application.
+```bash
+    # Configure our AWS Account locally using aws credentials
+    aws configure
+
+    # Get Our AWS Account
+    aws sts get-caller-identity
+
+    #Display the default region
+    aws configure get region
+
+    ## Bootstrap our AWS Account
+    cdk bootstrap aws://ACCOUNT-NUMBER/REGION
+
+```
+
+
+
 ## Build the stack & Check the Difference
 
 ```bash
@@ -77,22 +128,13 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
         [+] Unknown Rules: {"CheckBootstrapVersion":{"Assertions":[{"Assert":{"Fn::Not":[{"Fn::Contains":[["1","2","3","4","5"],{"Ref":"BootstrapVersion"}]}]},"AssertDescription":"CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."}]}}
 ```
 
-## Bootstrap our AWS Account:
-- We need initialize our environment with our AWS Account
+
+## Deploy our Stack to AWS
+
 ```bash
-    # Configure our AWS Account locally using aws credentials
-    aws configure
-
-    # Get Our AWS Account
-    aws sts get-caller-identity
-
-    #Display the default region
-    aws configure get region
-
-    ## Bootstrap our AWS Account
-    cdk bootstrap aws://ACCOUNT-NUMBER/REGION
-
+    cdk deploy
 ```
+
 
 ## Result & Test the deployment
 
@@ -111,8 +153,8 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 And we can see our Function works as expected...
 
 
-## Deploy our Stack to AWS
 
+## Cleaning up by destroying our stack
 ```bash
-    cdk deploy
+    cdk destroy
 ```
